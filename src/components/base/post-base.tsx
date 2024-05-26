@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation";
 
 import { useGetPosts } from "@/query/posts";
 
-import { Pagination } from "@/components/pagination";
-import { PostCard } from "@/components/post-card";
+import { PostCard } from "@/components/card/post/post-card";
+import { Pagination } from "@/components/pagination/pagination";
 
 type PostsProps = {
   page: number;

@@ -19,8 +19,7 @@ import {
 import { cn } from "@/utils/style";
 import { User } from "@/utils/validations/users";
 
-import { FormUser } from "./form-user";
-import { PropagationStopper } from "./propagation-stopper";
+import { UserForm } from "../../form/user-form";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -31,16 +30,17 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "./ui/alert-dialog";
-import { Button } from "./ui/button";
+} from "../../ui/alert-dialog";
+import { Button } from "../../ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./ui/dialog";
-import { toast } from "./ui/use-toast";
+} from "../../ui/dialog";
+import { toast } from "../../ui/use-toast";
+import { PropagationStopper } from "../../utility/propagation-stopper";
 
 type UserCardProps = {
   user: User | undefined;
@@ -117,7 +117,7 @@ export function UserCard({ user }: UserCardProps) {
                       <DialogHeader>
                         <DialogTitle>Edit User</DialogTitle>
                       </DialogHeader>
-                      <FormUser user={user} setOpen={setOpen} />
+                      <UserForm user={user} setOpen={setOpen} />
                     </DialogContent>
                     <AlertDialogContent>
                       <AlertDialogHeader>

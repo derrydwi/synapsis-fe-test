@@ -1,7 +1,7 @@
 import { getUserByIdConfig } from "@/query/users";
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 
-import { UserDetail } from "@/components/user-detail";
+import { UserDetail } from "@/components/detail/user/user-detail";
 
 import { getQueryClient } from "@/lib/react-query";
 

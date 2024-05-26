@@ -1,7 +1,7 @@
 import { getPostByIdCommentConfig, getPostByIdConfig } from "@/query/posts";
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 
-import { PostDetail } from "@/components/post-detail";
+import { PostDetail } from "@/components/detail/post/post-detail";
 
 import { getQueryClient } from "@/lib/react-query";
 

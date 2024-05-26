@@ -21,7 +21,7 @@ export function PostDetail({ id }: { id: number }) {
   const router = useRouter();
 
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-6 md:gap-8 md:py-4">
       <Button
         variant="outline"
         className="w-fit gap-2"
@@ -49,7 +49,7 @@ export function PostDetail({ id }: { id: number }) {
               </AvatarFallback>
             </Avatar>
             <div className="grid gap-2">
-              <div className="flex items-center gap-x-1.5">
+              <div className="flex flex-col items-start gap-1.5 sm:flex-row sm:items-center">
                 <span className="font-medium leading-none">
                   {userById.data?.data.name}
                 </span>
@@ -60,7 +60,7 @@ export function PostDetail({ id }: { id: number }) {
             </div>
           </div>
         ) : null}
-        <p>{postById.data?.data.body}</p>
+        <p className="text-sm md:text-base">{postById.data?.data.body}</p>
       </div>
       <Separator />
       <div className="grid gap-4">
@@ -68,17 +68,17 @@ export function PostDetail({ id }: { id: number }) {
           Comments
         </h4>
         {postByIdComment.data?.data.length ? (
-          <div className="grid gap-2">
+          <div className="grid gap-y-6">
             {postByIdComment.data?.data.map((comment) => (
               <Fragment key={comment.id}>
-                <div className="flex items-baseline gap-4">
+                <div className="flex flex-col items-baseline gap-4 sm:flex-row">
                   <Avatar className="h-9 w-9">
                     <AvatarFallback className="select-none uppercase">
                       {comment.name?.slice(0, 2)}
                     </AvatarFallback>
                   </Avatar>
-                  <div className="grid gap-2">
-                    <div className="flex items-center gap-x-1.5">
+                  <div className="grid w-full gap-2">
+                    <div className="flex flex-col items-start gap-1.5 sm:flex-row sm:items-center">
                       <span className="font-medium leading-none">
                         {comment.name}
                       </span>
@@ -86,7 +86,7 @@ export function PostDetail({ id }: { id: number }) {
                         ({comment.email})
                       </span>
                     </div>
-                    <p>{comment.body}</p>
+                    <p className="text-sm md:text-base">{comment.body}</p>
                   </div>
                 </div>
               </Fragment>

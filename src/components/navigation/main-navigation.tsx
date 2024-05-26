@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -10,7 +12,7 @@ type NavItemProps = {
   label: string;
 };
 
-function NavItem({ href, label }: NavItemProps) {
+function NavigationItem({ href, label }: NavItemProps) {
   const pathname = usePathname();
 
   return (
@@ -26,7 +28,7 @@ function NavItem({ href, label }: NavItemProps) {
   );
 }
 
-export function MainNav() {
+export function MainNavigation() {
   return (
     <div className="hidden md:flex">
       <Link href="/" className="mr-6 flex items-center gap-2">
@@ -36,8 +38,8 @@ export function MainNav() {
         </h1>
       </Link>
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
-        <NavItem href="/posts" label="Posts" />
-        <NavItem href="/users" label="Users" />
+        <NavigationItem href="/posts" label="Posts" />
+        <NavigationItem href="/users" label="Users" />
       </nav>
     </div>
   );

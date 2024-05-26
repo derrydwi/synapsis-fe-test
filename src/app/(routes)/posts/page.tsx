@@ -1,7 +1,7 @@
 import { getPostsConfig } from "@/query/posts";
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 
-import { Posts } from "@/components/post";
+import { Posts } from "@/components/base/post-base";
 
 import { getQueryClient } from "@/lib/react-query";
 

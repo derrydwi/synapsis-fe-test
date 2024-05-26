@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
+import { SiteFooter } from "@/components/footer/footer";
+import { SiteHeader } from "@/components/header/site-header";
 import { Toaster } from "@/components/ui/toaster";
 
 import ReactQueryProvider from "@/providers/react-query-provider";
@@ -42,7 +42,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Header />
+            <SiteHeader />
             <main className="flex-1">
               <div className="flex-1 items-start">
                 <div className="flex h-full flex-col gap-4 py-6 pl-8 pr-6 lg:py-8">
@@ -51,7 +51,7 @@ export default function RootLayout({
                 </div>
               </div>
             </main>
-            <Footer />
+            <SiteFooter />
           </ThemeProvider>
         </ReactQueryProvider>
       </body>

@@ -25,7 +25,7 @@ const navigations = [
   },
 ];
 
-export function MobileNav() {
+export function MobileNavigation() {
   const [open, setOpen] = useState(false);
 
   return (

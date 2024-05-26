@@ -9,21 +9,21 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Plus, SearchIcon } from "lucide-react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
-import { Pagination } from "@/components/pagination";
-import { UserCard } from "@/components/user-card";
+import { UserCard } from "@/components/card/user/user-card";
+import { Pagination } from "@/components/pagination/pagination";
 
 import { updateSearchParams } from "@/utils/helpers";
 import { Search, searchSchema } from "@/utils/validations/search";
 
-import { FormUser } from "./form-user";
-import { Button } from "./ui/button";
+import { UserForm } from "../form/user-form";
+import { Button } from "../ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./ui/dialog";
+} from "../ui/dialog";
 import {
   Form,
   FormControl,
@@ -31,8 +31,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "./ui/form";
-import { Input } from "./ui/input";
+} from "../ui/form";
+import { Input } from "../ui/input";
 
 type UsersProps = {
   page: number;
@@ -72,7 +72,7 @@ export function Users({ page, search }: UsersProps) {
             <DialogHeader>
               <DialogTitle>Add User</DialogTitle>
             </DialogHeader>
-            <FormUser setOpen={setOpen} />
+            <UserForm setOpen={setOpen} />
           </DialogContent>
         </Dialog>
         <Form {...form}>

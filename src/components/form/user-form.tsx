@@ -8,8 +8,8 @@ import { SubmitHandler, useForm } from "react-hook-form";
 
 import { User, userSchema } from "@/utils/validations/users";
 
-import { Button } from "./ui/button";
-import { DialogFooter } from "./ui/dialog";
+import { Button } from "../ui/button";
+import { DialogFooter } from "../ui/dialog";
 import {
   Form,
   FormControl,
@@ -17,17 +17,17 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "./ui/form";
-import { Input } from "./ui/input";
-import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
-import { toast } from "./ui/use-toast";
+} from "../ui/form";
+import { Input } from "../ui/input";
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
+import { toast } from "../ui/use-toast";
 
 type FormUserProps = {
   user?: User | undefined;
   setOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-export function FormUser({ user, setOpen }: FormUserProps) {
+export function UserForm({ user, setOpen }: FormUserProps) {
   const createUser = useCreateUser();
   const updateUserById = useUpdateUserById();
 
