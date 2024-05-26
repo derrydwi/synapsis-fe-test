@@ -1,3 +1,5 @@
+import React from "react";
+
 const preventDefaultPropagtion = (
   e: React.MouseEvent<HTMLElement, MouseEvent>,
 ) => {
