@@ -95,8 +95,8 @@ This application interacts with the GoREST API to perform various operations. Be
 - Users:
 
   - GET /users - Fetch a list of users.
-  - POST /users - Create a new user.
   - GET /users/:id - Fetch a user by ID.
+  - POST /users - Create a new user.
   - PUT /users/:id - Update a user by ID.
   - DELETE /users/:id - Delete a user by ID.
 
@@ -104,6 +104,7 @@ This application interacts with the GoREST API to perform various operations. Be
 
   - GET /posts - Fetch a list of posts.
   - GET /posts/:id - Fetch a post by ID.
+  - GET /posts/:id/comments - Fetch comments for a post by ID.
 
 ## Components
 
